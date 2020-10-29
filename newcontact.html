@@ -18,10 +18,10 @@
         <input type="text" id="prenom" name="prenom" required placeholder="Entrez un prénom">
 
         <label for="email">Email :</label>
-        <input type="text" id="email" name="prenom" required placeholder="Entrez un email">
+        <input type="text" id="email" name="prenom" required placeholder="Entrez un email" pattern="[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z.]{2,15}">
 
         <label for="telephone">Numéro de téléphone :</label>
-        <input type="number" id="telephone" name="telephone" required placeholder="Entrez un numéro de téléphone">
+        <input type="tel" id="telephone" name="telephone" required placeholder="Entrez un numéro de téléphone" pattern="[0-9]{10}">
 
         <input type="submit" value="Envoyer le formulaire">
 
