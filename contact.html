@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet", href="assets\style\style.css">
+    <title>Site Agence</title>
+</head>
+
+    <body>
+
+    <header>
+
+        <span> HTML5 Kesako </span>
+
+    <img srcset="assets\img\code.svg"
+        height="25%"
+        width="25%"></img> 
+
+</header>
+    
+        <ul id="nav">
+            
+               <li><a href="PageDAccueil.html">Présentation</a></li>
+               <li><a href="news.html">Actualités</a></li>
+               <li><a href="profil.html">Mon Profil</a></li>
+               <li><a href="contact.html">Contact</a></li>
+           
+        </ul>
+
+        <h1>Contact</h1>
+            <form id="contact" action="" methode="">
+                <fieldset>
+                    <legend>Information personnelles</legend>
+                    
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom"><br/>
+                    
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom"><br/>
+                    
+                    <label for="age">Age :</label>
+                    <input type="number" id="age" name="age" required placeholder="Entrez votre age"><br/>
+                    
+                    <label for="date">Date :</label>
+                    <input type="date" id="date" name="date" required placeholder="Entrez la date"><br/>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required placeholder="Entrez votre email"><br/>
+
+                    <label for="phonenumber">Numéro de téléphone :</label>
+                    <input type="number" id="phonenumber" name="phonenumber" required placeholder="Entrez votre numéro" pattern="[0--9]{10}"><br/>
+
+                    <label for="message">Votre message SVP :</label>
+                    <textarea id="message" name="message" cols="45" rows="2"></textarea>
+
+                    <input type="submit" value="Envoyer le formulaire">
+
+                    <input type="reset">
+
+                </fieldset>
+
+                <p>Un exemple qui illustre l'utilisation de <code>&lt;input type="color"&gt;</code>.</p>
+
+                <label for="colorWell">Couleur :</label>
+                <input type="color" value="#ff0000" id="colorWell">
+
+                <p>ceci est un texte trop cool qui change de couleur</p>
+
+                <script>
+                var colorWell
+                var defaultColor = "#0000ff";
+
+                window.addEventListener("load", startup, false);
+
+                function startup() {
+                colorWell = document.querySelector("#colorWell");
+                colorWell.value = defaultColor;
+                colorWell.addEventListener("input", updateFirst, false);
+                colorWell.addEventListener("change", updateAll, false);
+                colorWell.select();
+                }
+
+                function updateFirst(event) {
+                var p = document.querySelector("p");
+
+                if (p) {
+                p.style.color = event.target.value;
+                }
+                }
+
+                function updateAll(event) {
+                document.querySelectorAll("body").forEach(function(p) {
+                p.style.color = event.target.value;
+                });
+                }
+                </script>
+
+            </form>
+       
+    </body>
+</html>
